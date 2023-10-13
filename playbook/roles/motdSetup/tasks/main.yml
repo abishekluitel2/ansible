@@ -1,0 +1,5 @@
+---
+- name: Configure MOTD
+  copy:
+    content: "{{ motd_message }}"
+    dest: /etc/motd

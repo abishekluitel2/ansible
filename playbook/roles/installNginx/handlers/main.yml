@@ -1,0 +1,3 @@
+---
+ - name: Reloading Nginx
+   action: service name=nginx state=restarted
