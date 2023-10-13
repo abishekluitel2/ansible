@@ -1,0 +1,14 @@
+---
+- name: Configure and Deploy Linux Machine
+  hosts: Devops
+  user: ansible 
+  become: yes
+  connection: ssh
+  roles:
+    - addUser
+    - timezoneSetup
+    - motdSetup
+    - ntpSetup
+    - rootPasswordUpdate
+    - installNginx
+...

@@ -1,0 +1,10 @@
+---
+- name: Installing Nginx
+  action: apt name=nginx state=present
+- name: Copy Nginx Configuration
+  template:
+    src: /home/ansible/playbook/roles/templetes/nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify:
+    - Reloading Nginx
+...

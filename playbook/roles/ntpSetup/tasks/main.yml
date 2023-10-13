@@ -1,0 +1,14 @@
+---
+- name: Configure NTP Servers
+  become: yes
+  apt:
+    name: ntp
+    state: present
+
+- name: Set NTP Servers
+  become: yes
+  copy:
+    src: /home/ansible/playbook/roles/templetes/ntp.conf
+    dest: /etc/ntp.conf
+  notify:
+    - Restart NTP

@@ -1,0 +1,7 @@
+---
+- vars:
+   users: madan
+   password: madan
+   motd_message: "Welcome '${{username}}'"
+   rootPassword: madan
+...

@@ -1,0 +1,14 @@
+---
+- name: Adding User
+  user: 
+   name: "{{ item.username }}" 
+   password: "{{ item.password | password_hash('sha512') }}"
+   createhome: yes
+  with_items: "{{ users }}"
+
+- name: Adding authorized_keys
+  authorized_keys:
+    user: {item.username}
+    state: present
+    key: /home/ansible/.ssh/id_rsa.pub
+  with_items: "{{ users }}"

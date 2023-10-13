@@ -1,0 +1,14 @@
+---
+timezone: "Asia/Kathmandu"
+
+# Message of the Day (MOTD)
+#motd_message: "Welcome to our server. This is a custom MOTD message."
+
+# NTP server configuration
+#ntp_servers:
+#  - server: 0.pool.ntp.org
+#  - server: 1.pool.ntp.org
+#  - server: 2.pool.ntp.org
+
+# Root password (replace 'your_root_password' with your desired root password)
+root_password: admin
